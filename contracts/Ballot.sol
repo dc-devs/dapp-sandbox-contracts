@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
 
+import 'hardhat/console.sol';
+
 /// @title Voting with delegation.
 contract Ballot {
 	// This declares a new complex type which will
@@ -31,6 +33,10 @@ contract Ballot {
 	/// Create a new ballot to choose one of `proposalNames`.
 	constructor(bytes32[] memory proposalNames) {
 		chairperson = msg.sender;
+
+		// Adding chairpersonAdress to voters
+		// CREATES a Voter at mapping adress
+		// AND THEN setting the weight to 1
 		voters[chairperson].weight = 1;
 
 		// For each of the provided proposal names,
@@ -62,7 +68,11 @@ contract Ballot {
 			'Only chairperson can give right to vote.'
 		);
 		require(!voters[voter].voted, 'The voter already voted.');
-		require(voters[voter].weight == 0);
+		require(voters[voter].weight == 0, 'The voters weight must be 0.');
+
+		// Adding voterAdress to voters
+		// CREATES a Voter at mapping adress
+		// AND THEN setting the weight to 1
 		voters[voter].weight = 1;
 	}
 
@@ -70,8 +80,8 @@ contract Ballot {
 	function delegate(address to) public {
 		// assigns reference
 		Voter storage sender = voters[msg.sender];
-		require(!sender.voted, 'You already voted.');
 
+		require(!sender.voted, 'You already voted.');
 		require(to != msg.sender, 'Self-delegation is disallowed.');
 
 		// Forward the delegation as long as
@@ -82,8 +92,26 @@ contract Ballot {
 		// In this case, the delegation will not be executed,
 		// but in other situations, such loops might
 		// cause a contract to get "stuck" completely.
+
+		console.logString('');
+		console.logString('voters[to].delegate');
+		console.logAddress(voters[to].delegate);
+		console.logString('adress(0)');
+		console.logAddress(address(0));
+		console.logString('');
+
+		// address(0) == '0x0000000000000000000000000000000000000000'
+		// https://ethereum.stackexchange.com/questions/52084/delegate-function-really-needed-while-loopvoting-example
 		while (voters[to].delegate != address(0)) {
 			to = voters[to].delegate;
+
+			console.logString('');
+			console.logString('loop');
+			console.logString('to');
+			console.logAddress(to);
+			console.logString('msg.sender');
+			console.logAddress(msg.sender);
+			console.logString('');
 
 			// We found a loop in the delegation, not allowed.
 			require(to != msg.sender, 'Found loop in delegation.');
@@ -94,6 +122,7 @@ contract Ballot {
 		sender.voted = true;
 		sender.delegate = to;
 		Voter storage delegate_ = voters[to];
+
 		if (delegate_.voted) {
 			// If the delegate already voted,
 			// directly add to the number of votes

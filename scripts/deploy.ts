@@ -32,8 +32,13 @@ const main = async () => {
 	];
 	const ballot = await Ballot.deploy(proposalNames);
 
-	await ballot.deployed();
-	console.log('Ballot deployed to:', ballot.address);
+	// Deploy Variables
+	// -----------------
+	const Variables = await ethers.getContractFactory('Variables');
+	const variables = await Variables.deploy(proposalNames);
+
+	await variables.deployed();
+	console.log('Variables deployed to:', variables.address);
 };
 
 // We recommend this pattern to be able to use async/await everywhere
