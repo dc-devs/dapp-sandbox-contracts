@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
 
+import 'hardhat/console.sol';
+
 contract SimpleCounter {
 	// identifiers
 	// --------------
@@ -22,6 +24,7 @@ contract SimpleCounter {
 	}
 
 	function get() public view returns (uint256) {
+		console.log(number);
 		return number;
 	}
 }
