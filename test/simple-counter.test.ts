@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { ethers } from 'hardhat';
-import Error from '../constants/Error';
+import Error from './enums/Error';
 
 describe('SimpleCounter', () => {
 	describe('get', () => {

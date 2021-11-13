@@ -113,6 +113,7 @@ This project holds set of experimental smart contracts just used to better learn
 ## Useful Links
 
 -   [Ethereum Blockchain Developer](https://ethereum-blockchain-developer.com/010-solidity-basics/03-integer-overflow-underflow/)
+-   [Solidity Documentation](https://docs.soliditylang.org)
 -   [Remix (Ethereum IDE)](https://remix.ethereum.org/)
 -   [OpenZeppelin](https://openzeppelin.com/contracts/)
 
