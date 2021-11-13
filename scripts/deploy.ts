@@ -14,31 +14,13 @@ const main = async () => {
 	// manually to make sure everything is compiled
 	await run('compile');
 
-	// Deploy SimpleStorage
+	// Deploy SimpleCounter
 	// ----------------------
-	const SimpleStorage = await ethers.getContractFactory('SimpleStorage');
-	const storage = await SimpleStorage.deploy();
+	const SimpleCounter = await ethers.getContractFactory('SimpleCounter');
+	const storage = await SimpleCounter.deploy();
 
 	await storage.deployed();
-	console.log('SimpleStorage deployed to:', storage.address);
-
-	// Deploy Ballot
-	// ----------------
-	const Ballot = await ethers.getContractFactory('Ballot');
-	const proposalNames = [
-		ethers.utils.formatBytes32String('Proposal 1'),
-		ethers.utils.formatBytes32String('Proposal 2'),
-		ethers.utils.formatBytes32String('Proposal 3'),
-	];
-	const ballot = await Ballot.deploy(proposalNames);
-
-	// Deploy Variables
-	// -----------------
-	const Variables = await ethers.getContractFactory('Variables');
-	const variables = await Variables.deploy(proposalNames);
-
-	await variables.deployed();
-	console.log('Variables deployed to:', variables.address);
+	console.log('SimpleCounter deployed to:', storage.address);
 };
 
 // We recommend this pattern to be able to use async/await everywhere
