@@ -33,6 +33,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#useful-links">Useful Links</a></li>
   </ol>
 </details>
 <br/>
@@ -85,7 +86,9 @@ This project holds set of experimental smart contracts just used to better learn
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
+
 ## Usage
+
 -   Linting
     ```sh
     yarn lint
@@ -102,5 +105,15 @@ This project holds set of experimental smart contracts just used to better learn
     ```sh
     yarn start
     ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- USEFUL LINKS -->
+
+## Useful Links
+
+-   [Ethereum Blockchain Developer](https://ethereum-blockchain-developer.com/010-solidity-basics/03-integer-overflow-underflow/)
+-   [Remix (Ethereum IDE)](https://remix.ethereum.org/)
+-   [OpenZeppelin](https://openzeppelin.com/contracts/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
