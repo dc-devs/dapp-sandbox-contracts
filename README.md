@@ -10,10 +10,12 @@
   <h3 align="center">DApp Sandbox Contracts</h3>
 
   <p align="center">
-    A set of experimental smart contracts for practicing Solidity development. The front end code for this project can be found here: 
+    A set of experimental smart contracts for practicing Solidity development. 
+    <br/>
+    The front end code for this project can be found here: 
     <a href="https://github.com/DWC01/dapp-sandbox" target="_blank" style="display: inline-block;">
       dapp-sandbox
-    </a>
+    </a>.
   </p>
 
   </p>
@@ -54,7 +56,7 @@
 
 ## About The Project
 
-This project holds set of experimental smart contracts just used to better learn how to develop with Solidity and create DApps on Ethereum (or any EVM compatible smart contract platform).
+This project holds set of experimental smart contracts just used to better learn how to develop with Solidity and create DApps on Ethereum (or any EVM compatible smart contract platform). The front end code for this project can be found here: [dapp-sandbox](https://github.com/DWC01/dapp-sandbox).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
