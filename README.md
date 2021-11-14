@@ -10,8 +10,20 @@
   <h3 align="center">DApp Sandbox Contracts</h3>
 
   <p align="center">
-    A set of experimental smart contracts for practicing Solidity development.
+    A set of experimental smart contracts for practicing Solidity development. The front end code for this project can be found here: 
+    <a href="https://github.com/DWC01/dapp-sandbox" target="_blank" style="display: inline-block;">
+      dapp-sandbox
+    </a>
   </p>
+
+  </p>
+  <br />
+  <br />
+  <a href="https://dappsandbox.io/" target="_blank">View Demo</a>
+  ·
+  <a href="https://github.com/DWC01/dapp-sandbox-contracts/issues" target="_blank">Report Bug</a>
+  ·
+  <a href="https://github.com/DWC01/dapp-sandbox-contracts/issues" target="_blank">Request Feature</a>
 </div>
 
 <!-- TABLE OF CONTENTS -->

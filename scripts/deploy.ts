@@ -6,7 +6,7 @@
 import { run, ethers } from 'hardhat';
 
 const main = async () => {
-	console.log('Running Scrips - Deploy');
+	console.log('Running Scripts - Deploy');
 	// Hardhat always runs the compile task when running scripts with its command
 	// line interface.
 	//

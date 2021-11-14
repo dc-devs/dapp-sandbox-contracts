@@ -4,12 +4,15 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"build": "yarn tsc",
 		"lint:ts": "yarn eslint . --ext .ts",
 		"lint:sol": "solhint 'contracts/**/*.sol'",
 		"lint": "yarn lint:ts && yarn lint:sol",
 		"compile": "yarn lint && yarn hardhat compile",
 		"test": "yarn compile && yarn hardhat test",
-		"start": "yarn hardhat node"
+		"start": "yarn hardhat node",
+		"console:local": "npx hardhat console --network localhost",
+		"deploy:local": "yarn build && yarn hardhat run --network localhost build/scripts/deploy.js"
 	},
 	"keywords": [],
 	"author": "",
