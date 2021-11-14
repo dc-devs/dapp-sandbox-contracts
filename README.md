@@ -13,9 +13,7 @@
     A set of experimental smart contracts for practicing Solidity development. 
     <br/>
     The front end code for this project can be found here: 
-    <a href="https://github.com/DWC01/dapp-sandbox" target="_blank" style="display: inline-block;">
-      dapp-sandbox
-    </a>.
+    <a href="https://github.com/DWC01/dapp-sandbox" target="_blank" style="display: inline-block;">dapp-sandbox</a>.
   </p>
 
   </p>
